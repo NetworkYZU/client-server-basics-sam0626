@@ -18,9 +18,9 @@ public class PortScanner {
      */
     public static void main(String[] args){
         // TODO code application logic here
-        for(int i=0; i<=1024; i++){
+        for(int i=1; i<=1024; i++){
             //hint: 建立 socket，連結到 i port
-            try(Socket socket=null){
+            try(Socket socket=new Socket("localhost", i)){
             /////////////////////////////////
                 System.out.println("there is a service on port: "+i);
             }catch(Exception e){
